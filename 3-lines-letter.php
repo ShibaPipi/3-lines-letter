@@ -16,7 +16,7 @@
 
 	// $myHeart = NUll;
 
-	var_dump($myHeart);					// 
+	var_dump($myHeart);					// 我的心中，空空如也
 
 	var_dump((bool) ++$myHeart);		// 要么不爱，要么爱你
 
