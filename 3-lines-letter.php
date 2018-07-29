@@ -9,15 +9,26 @@
 	 *
 	 * 此时做到了源码和输出均有三行的统一结果 （第一行不算源码，别问我为什么）
 	 *
-	 * 遗憾：第 21 行，第 23 行打印结果是 bool(true)，不是 true
+	 * 遗憾：第 23 行，第 25 行打印结果是 bool(true)，不是 true
+	 *
+	 * 工作时你要是这么 coding，后果很严重
 	 *
 	 * 我还很菜，请大佬们轻喷
 	 */
 
 	// $myHeart = NUll;
 
-	var_dump($myHeart);					// 我的心中，空空如也
+	var_dump($myHeart);												// 我的心中，空空如也
 
-	var_dump((bool) ++$myHeart);		// 要么不爱，要么爱你
+	var_dump($myHeart = (bool) ++$myHeart ? (bool) $myHeart : '');	// 要么不爱，要么爱你
 
-	var_dump((bool) --$myHeart);		// 你入我心，挥之不去
+	var_dump(--$myHeart);											// 你入我心，挥之不去
+
+	/**
+	 * 运行结果 ：
+	 *
+	 * NULL
+	 * bool(true)
+	 * bool(true)
+	 *
+	 */
